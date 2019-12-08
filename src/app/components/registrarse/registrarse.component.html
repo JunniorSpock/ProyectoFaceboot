@@ -1,0 +1,49 @@
+<div class="container">
+        <form class="my-5">
+                <div class="form-group">
+                  <label for="ingresa tu nombre">Nombre</label>
+                  <input type="name" class="form-control" id="nombre" aria-describedby="nombreHelp" placeholder="Introduce tu nombre">
+                  
+                </div>
+                <div class="form-group">
+                        <label for="ingresa tu usuario">Usuario</label>
+                  <input type="text" class="form-control" id="usuario" placeholder="Usuario">
+                </div>
+                <div class="form-group">
+                        <label for="ingresa tu fecha de nacimiento">Fecha de nacimiento:</label>
+                        <input type="text" class="form-control" id="fechaNacimiento" placeholder="DD/MM/AAAA">
+                </div>
+                <div class="form-group">
+                            <label for="edad del usaurio">Edad:</label>
+                            <input type="text" class="form-control" id="edad" placeholder="20 Años">
+                </div>
+                <div class="form-group">
+                                <label for="sexo del usuario">Sexo</label>
+                                <input type="text" class="form-control" id="sexo" placeholder="DD/MM/AAAA">
+                </div>
+
+                <div class="form-group">
+                                <label for="Peliculas del usuario">Peliculas Favoritas</label>
+                                <div class="list-group" id="myList" role="tablist">
+                                        <a class="list-group-item list-group-item-action active" data-toggle="list" href="#home" role="tab">Home</a>
+                                        <a class="list-group-item list-group-item-action" data-toggle="list" href="#profile" role="tab">Profile</a>
+                                        <a class="list-group-item list-group-item-action" data-toggle="list" href="#messages" role="tab">Messages</a>
+                                        <a class="list-group-item list-group-item-action" data-toggle="list" href="#settings" role="tab">Settings</a>
+                                      </div>
+                                      
+                                      <div class="tab-content">
+                                        <div class="tab-pane active" id="home" role="tabpanel">...</div>
+                                        <div class="tab-pane" id="profile" role="tabpanel">...</div>
+                                        <div class="tab-pane" id="messages" role="tabpanel">...</div>
+                                        <div class="tab-pane" id="settings" role="tabpanel">...</div>
+                                      </div>
+                                      
+                                      <script>
+                                        $(function () {
+                                          $('#myList a:last-child').tab('show')
+                                        })
+                                      </script>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+</div>

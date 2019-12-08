@@ -1,0 +1,25 @@
+* {
+    background-color: #fff;
+}
+
+.centrar{
+    height: 100vh;
+}
+
+.btn-primary, .nav-link{
+    color: #fff;
+    background-color: #3a559f;
+    border-width: 2px;
+    border-color: #3a559f!important ;
+    transition: .3s;
+}
+
+.btn-primary:hover , .nav-link:hover  {
+    color: black;
+    background-color: #fff;
+    border-color: #3a559f!important ;
+    transition: .3s;
+
+
+
+}

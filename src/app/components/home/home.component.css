@@ -1,0 +1,54 @@
+body{
+    background-color: #E9EBEE;
+}
+
+.icon-lock {
+    font-size: 32px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.icon-color{
+    color: #3a559f!important;
+
+}
+.post-config {
+  display: flex;
+}
+.list-group-item{
+    display: flex;
+}
+
+.btn-primary, .active, .btn-outline-primary{
+    background-color: #3a559f!important;
+    border-color:  #3a559f!important;
+}
+
+.hashtag{
+    background-color: #EDF2F7;
+    border-radius: 50px;
+    margin: 5px;
+    padding-left: 4px;
+    padding-right: 4px;
+    padding: 3px;
+}
+
+.bg-light{
+    background-color: #3a559f!important;
+}
+
+.nav-pills .nav-link, .nav-link .active{
+    background-color: #fff;
+    color: black;
+  }
+
+  .nav-link{
+    padding: 0rem 0px;
+  }
+  p{
+      margin: 0;
+  }
+
+  .id{
+      display: none;
+  }

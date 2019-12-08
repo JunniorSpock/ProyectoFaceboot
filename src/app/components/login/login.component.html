@@ -1,0 +1,136 @@
+<div class="container">
+    <div class="row">
+
+   
+            <section class="header-main">
+                <div class="background-overlay text-white py-5 ">
+                    <div class="row h-100 text-center mx-auto">
+                        <div
+                            class="text-center justify-content-center align-self-center mx-auto animated infinite bounce">
+                            <img src="../../../assets/LogoFaceboot.png" class="mx-auto ">
+                        </div>
+                    </div>
+                </div>
+            </section>
+     
+
+
+   
+            <section class="login-main">
+                <div class="text-center">
+                    <h2>FACEBOOT</h2>
+                </div>
+
+                <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                    <li class="nav-item">
+                        <p>Si no tienes cuenta</p>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab"
+                            aria-controls="pills-home" aria-selected="true">Registrate</a>
+                    </li>
+                    <li class="nav-item">
+                        <p>si ya tienes cuenta, solo </p>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab"
+                            aria-controls="pills-profile" aria-selected="false">Inicia Sesion</a>
+                    </li>
+
+                </ul>
+
+
+
+                <div class="tab-content" id="pills-tabContent">
+                    <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
+                        aria-labelledby="pills-home-tab">
+                        <div class="background-overlay  py-5 ">
+                            <div class="row h-100 text-center container mx-auto">
+                                <div class="text-center justify-content-center align-self-center mx-auto">
+                                    
+
+
+                                    <form #formRegistrar="ngForm" (ngSubmit)="Registrarse(formRegistrar)">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" name="nombre"
+                                                 placeholder="Nombre" ngModel required>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" name="usuario"
+                                                 placeholder="Usuario" ngModel required>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" name="edad"
+                                                 placeholder="Edad" ngModel required>
+                                        </div>
+                                        <div class="form-group">
+                                            <select class="form-control" ngModel placeholder="sexo"
+                                                id="exampleFormControlSelect1" name=sexo>
+                                                <option>H</option>
+                                                <option>M</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="password" class="form-control" name="contrasenia"
+                                                placeholder="Contraseña" ngModel required>
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <input type="date" class="form-control" name="fechaNacimiento"
+                                                ngModel required>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <select class="form-control" ngModel id="exampleFormControlSelect1"
+                                            name="generosMusicales">
+                                                <option>Rock</option>
+                                                <option>Jazz</option>
+                                                <option>Rap</option>
+                                                <option>RYB</option>
+                                                <option>Blues</option>
+                                                <option>Electronico</option>
+                                                <option>Metal</option>
+                                                <option>Reggaeton</option>
+                                                <option>Reggae</option>
+                                                <option>Lofi</option>
+                                                <option>memeMusic</option>
+                                                <option>Banda</option>
+                                                <option>Norteño</option>
+                                                <option>Corridos</option>
+                                                <option>Soundtracks</option>
+                                                <option>Ska</option>
+                                                <option>Baladas</option>
+                                            </select>
+                                        </div>
+
+                                        <button type="submit" class="btn btn-primary btn-block">Registrarme</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                        <div class="background-overlay text-white py-5 ">
+                            <div class="row h-100 text-center mx-auto">
+                                <div class="text-center justify-content-center align-self-center mx-auto">
+                                    <form #formLogin="ngForm" (ngSubmit)="login(formLogin)">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" name="usuario"
+                                                aria-describedby="emailHelp" placeholder="Enter name" ngModel required>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="password" class="form-control" name="contrasenia"
+                                                placeholder="Contraseña" ngModel required>
+                                        </div>
+                                        <button type="submit" class="btn btn-primary btn-block">Iniciar sesion</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+    </div>
+</div>

@@ -1,0 +1,69 @@
+.container{
+    margin: 0;
+} 
+
+ .header-main{
+  background-color: #3a559f!important;
+  height: 100vh;
+} 
+
+.login-main{
+  height: 100vh;
+}
+
+ul{
+  font-size: 18px;
+}
+  
+h1{
+    color: black;
+}
+  
+
+
+  /* .col-md-6{
+      padding: 0;
+  } */
+
+small{
+    font-style: italic;
+}
+
+.nav-pills .nav-link, .nav-link .active{
+  background-color: #fff;
+  color: black;
+}
+
+.nav-link{
+  padding: 0rem 5px;
+}
+
+a{
+    color: #3a559f!important;
+    font-style: italic;
+}
+  
+.background-overlay{
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.btn-primary, .nav-link{
+    color: #fff;
+    background-color: #3a559f;
+    border-width: 2px;
+    border-color: #3a559f!important ;
+    transition: .3s;
+}
+
+.btn-primary:hover , .nav-link:hover  {
+    color: black;
+    background-color: #fff;
+    border-color: #3a559f!important ;
+    transition: .3s;
+}
+
+
+

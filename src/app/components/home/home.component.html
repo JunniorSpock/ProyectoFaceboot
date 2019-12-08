@@ -1,0 +1,130 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-between "  >
+    <a class="navbar-brand text-white" href="#">FACEBOOT - Bienvenido {{nombre}}</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="d-flex justify-content-end">
+    <div class="collapse navbar-collapse "  id="navbarSupportedContent">
+      <ul class="navbar-nav ">
+        <li >
+        <form (ngSubmit)= "logOut()"  >
+          <button type="submit" class="btn btn-primary btn-block  btn-sm my-0" >Cerrar Sesión</button>
+        </form>
+      </li>
+      </ul>
+    </div>
+</div>
+</nav>
+
+
+<div class="container">
+  <div class="row">
+
+    <div class="col-md-3 profile mt-5 ">
+      <div class="card  sticky-top">
+        <div class="card-body text-center">
+          <h5 class="card-title">{{nombreUsuario}}</h5>
+          <h6 class="card-subtitle mb-2 text-muted"> {{edad}} años</h6>
+
+          <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+            <li class="nav-item">
+                <p>Mis peliculas favoritas son: </p>
+            </li>
+            <li class="nav-item" *ngFor="let nombre of peliculas">
+                <p> {{nombre.nombre}}, </p>
+              <li class="nav-item">
+                  <p>y mi genero musical favorito es:</p>
+              </li>
+              <li class="nav-item">
+                <p>{{generoFav}}</p>
+            </li>
+        </ul>
+
+          <a class="card-link"><i class="material-icons icon-color">note</i>{{numPost}}</a>
+          <a class="card-link"><i class="material-icons icon-color">supervisor_account</i>0</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6 feed mt-5">
+      <div class="card ">
+        <h5 class="card-header">¡Escribe un post!</h5>
+        <div class="card-body text-center">
+
+          <form  #formPublicacion="ngForm" (ngSubmit)="publicar(formPublicacion)">
+            <div class="form-group">
+              <textarea placeholder="¿En que estas pensando?" class="form-control"
+                name="contenido" rows="3" ngModel required> </textarea>
+            </div>
+            
+            <div class="form-group post-config">
+              <input type="text" class="form-control" id="tags" name="tags" placeholder="#Tags.." ngModel required>
+              <a class="card-link"><i class="material-icons icon-lock">lock_open</i>
+                <input checked="check" type="checkbox" class="form-check-input" id="tipoPublicacion" name="tipoPublicacion" ngModel></a>
+              <button type="submit" class="btn btn-outline-primary text-white">Publicar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- PUBLICACIONES-->
+      <div class="card mt-4">
+        <div class="card-body" *ngFor="let post of FacebootServices.post">
+          <h5 class="card-title">{{nombre}}</h5>
+          <h6 class="card-subtitle mb-2 text-muted">{{ post.createdAt | timeAgo}}</h6>
+          <p class="card-text">{{post.contenido}}</p>
+          <div class="form-group post-config">
+           
+            <div *ngFor="let tags of post.tags">
+              <p class="hashtag">{{ tags.tag}}</p>
+            </div>
+
+            <button type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false"
+              aria-controls="collapseExample" class="btn btn-outline-primary text-white ml-auto">Comentarios</button>
+          </div>
+
+          <div class="collapse" id="collapseExample">
+
+            <div class="card card-body mt-3">
+              <h6 class="card-title">Carlos Rubi</h6>
+              <h6 class="card-subtitle mb-2 text-muted">6 mins ago</h6>
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, quod?</p>
+            </div>
+
+            <form action="">
+              <div class="form-group post-config mt-3">
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Comentar..">
+                <button type="button" class="btn btn-outline-primary text-white">Publicar</button>
+              </div>
+            </form>
+
+          </div>
+
+
+
+        </div>
+      </div>
+
+    </div>
+
+    <div class="col-md-3 friends mt-5">
+      <flash-messages></flash-messages>
+      <ul class="list-group ">
+
+        <li class="list-group-item active">¡Mas amigos!</li>
+      </ul>
+
+      <table class="table table-borderless mt-2">
+        <tbody >
+            <tr  *ngFor="let usuarios of FacebootServices.usuarios">
+                <td>{{usuarios.usuario}}</td>
+                <td><a  class="btn btn-primary ml-auto text-white" (click)="agregar(usuarios)">Agregar</a ></td>
+            </tr>
+        </tbody>
+      </table>
+
+
+    </div>
+  </div>
+</div>
+
